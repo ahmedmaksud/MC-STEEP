@@ -1,3 +1,5 @@
+# Secure Multi-Carrier Communication using STEEP
+
 Run the 'test_*.py' files individually to obtain the plots, or run [run_tests.ipynb](run_tests.ipynb) to obtain all the plots at once. The [OFDM_STEEP_2.py](OFDM_STEEP_2.py) is the core module.
 
 ## Introduction
