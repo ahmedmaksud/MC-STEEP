@@ -1,3 +1,5 @@
+Run the 'test_*.py' files individually to obtain the plots or run 'run_tests.ipynb' to get all the plots at once. The OFDM_STEEP_2.py is the core module.
+
 ## Introduction
 The project explores the application of the [STEEP](https://arxiv.org/pdf/2309.14529) (Secret Transmission by Echoing Encrypted Probes) protocol for secure multi-carrier communication (MC-STEEP) between two single-antenna nodes in the presence of a multi-antenna eavesdropper. STEEP is a two-phase round-trip communication scheme designed to achieve positive secrecy rates in static non-reciprocal channels. This work focuses on optimizing MC-STEEP by proposing pairing and power allocation policies that significantly enhance the Average Achievable Secrecy Rate (AASR).
 
