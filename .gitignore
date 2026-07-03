@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.claude/
+
+# thesis PDF and the agent playbook are not part of the code artifact
+paper/
+AGENTS.md
+AGENT.md
+
+# detached run logs
+*.log
