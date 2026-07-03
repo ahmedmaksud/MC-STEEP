@@ -32,18 +32,18 @@ Large-scale fading to Eve is $\alpha$ from Alice and $\beta$ from Bob; the Alice
 
 Writing the per-carrier probing power (Alice) as $p_{A,n}$ and echoing power (Bob) as $p_{B,n}$, the raw SNRs for carrier $n$ are
 
-$$a_n = p_{A,n}\,|h_{BA,n}|^2,\quad b_n = p_{B,n}\,|h_{AB,n}|^2,\quad c_n = \alpha\,p_{A,n}\,\lVert g_{A,n}\rVert^2,\quad d_n = \beta\,p_{B,n}\,\lVert g_{B,n}\rVert^2 .$$
+$$a_n = p_{A,n}|h_{BA,n}|^2,\quad b_n = p_{B,n}|h_{AB,n}|^2,\quad c_n = \alpha p_{A,n}\lVert g_{A,n}\rVert^2,\quad d_n = \beta p_{B,n}\lVert g_{B,n}\rVert^2 .$$
 
 After the round trip a virtual wiretap channel forms from Bob to Alice for the secret message.
 The average achievable secrecy rate is
 
-$$C_{s,\text{steep}} = \frac{1}{N}\sum_{n=1}^{N}\left[\log_2\!\left(1+\frac{b_n}{\frac{a_n b_n}{(a_n+1)^2}+2}\right) - \log_2\!\left(1+\frac{d_n}{\frac{d_n a_n (a_n+c_n+1)}{(a_n+1)^2 (c_n+1)}+2}\right)\right]^{+},$$
+$$C_{s,\text{steep}} = \frac{1}{N}\sum_{n=1}^{N}\left[\log_2\left(1+\frac{b_n}{\frac{a_n b_n}{(a_n+1)^2}+2}\right) - \log_2\left(1+\frac{d_n}{\frac{d_n a_n (a_n+c_n+1)}{(a_n+1)^2 (c_n+1)}+2}\right)\right]^{+},$$
 
 which is compared against the classic wiretap channel
 
-$$C_{s,\text{classic}} = \frac{1}{N}\sum_{n=1}^{N}\left\{[\log_2(1+a_n)-\log_2(1+c_n)]^{+} + [\log_2(1+b_n)-\log_2(1+d_n)]^{+}\right\}$$
+$$C_{s,\text{classic}} = \frac{1}{N}\sum_{n=1}^{N}\left\lbrace[\log_2(1+a_n)-\log_2(1+c_n)]^{+} + [\log_2(1+b_n)-\log_2(1+d_n)]^{+}\right\rbrace$$
 
-and the per-carrier secret-key capacity $C_{key,n}=\log_2\!\left(1+a_n/(1+c_n)\right)$.
+and the per-carrier secret-key capacity $C_{key,n}=\log_2\left(1+a_n/(1+c_n)\right)$.
 
 In the code, the received-signal powers are named after the link direction: `SBA` is the power received at Bob from Alice (the probing power $p_A$, the x-axis of every sweep) and `SAB` is the power received at Alice from Bob (the echoing power $p_B$).
 Expectations over Eve's CSI are taken by Monte-Carlo since a closed form for $C_{s,\text{steep}}$ is not available without Eve's channel.
