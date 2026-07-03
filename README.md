@@ -41,9 +41,9 @@ $$C_{s,\text{steep}} = \frac{1}{N}\sum_{n=1}^{N}\left[\log_2\!\left(1+\frac{b_n}
 
 which is compared against the classic wiretap channel
 
-$$C_{s,\text{classic}} = \frac{1}{N}\sum_{n=1}^{N}\Big\{[\log_2(1+a_n)-\log_2(1+c_n)]^{+} + [\log_2(1+b_n)-\log_2(1+d_n)]^{+}\Big\}$$
+$$C_{s,\text{classic}} = \frac{1}{N}\sum_{n=1}^{N}\left\{[\log_2(1+a_n)-\log_2(1+c_n)]^{+} + [\log_2(1+b_n)-\log_2(1+d_n)]^{+}\right\}$$
 
-and the per-carrier secret-key capacity $C_{key,n}=\log_2\!\big(1+a_n/(1+c_n)\big)$.
+and the per-carrier secret-key capacity $C_{key,n}=\log_2\!\left(1+a_n/(1+c_n)\right)$.
 
 In the code, the received-signal powers are named after the link direction: `SBA` is the power received at Bob from Alice (the probing power $p_A$, the x-axis of every sweep) and `SAB` is the power received at Alice from Bob (the echoing power $p_B$).
 Expectations over Eve's CSI are taken by Monte-Carlo since a closed form for $C_{s,\text{steep}}$ is not available without Eve's channel.
